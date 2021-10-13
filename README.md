@@ -1,19 +1,28 @@
-Use NodeJS to implement web-server which hosts and serves files.
+Use NodeJS to implement CRUD API for notes. 
 
-Requirements:
-Use fs module to create/modify/read files in file system;
-Write every request info to logs;
-Application should support log, txt, json, yaml, xml, js file extensions ( consider filename may contain '.' symbol);
-Please check that your app can be launched with 'npm install' and 'npm start' commands just after git pull;
-Application should work at port 8080.
+Requirements: 
 
-Acceptance criteria:
-Server saves file on createFile request and responds with 200 status, use ‘filename' and ‘content’ body params to transfer file data.
-Server returns list of uploaded files on getFiles request
-Server returns file content on getFile request, use 'filename' url parameter to determine what file you want to retrieve.
-In case there are no file with provided name found, return 400 status.
+•Mandatory npm start script.
+•Please check that your app can be launched with 'npm install' and 'npm start' commands just after git pull;
+•Ability to run server on port which is defined as PORT environment variable, default to 8080;•Use express to implement web-server; 
+•Use express Router for scaling your app and MVC pattern to organize project structure;
+•Follow REST API rules described in Swagger file;
+•Encode all users password with BCRYPT npm package
+•Use config or dotenv npm packages to store configuration for your project;
+•Use jsonwebtoken package for jwt authorization;
+•Use Mongo Atlas for MongoDB connection;
+•Server handles errors for all requests;
+•Write every request info to logs;
+•Application code should follow eslint rules described in .eslintrc.json file(requires eslint and eslint-config-google packages install);
 
-Optional criteria:
-Server handles errors and validates input params for all requests.
-You can add password protection for files, with additional(optional) parameter 'password' in createFile request, and additional(optional) parameter ‘password' in getFile request in url query params. Consider server should handle invalid and empty password for protected files.
-Ability to modify files content (additional endpoint);•Ability to delete files (additional endpoint);
+Acceptance criteria: 
+
+•Ability to register users; 
+•User is able to login into the system;
+•User is able to view his profile info;
+•User is able to view only personal notes, provide pagination parameters for notes list, request note by id; 
+•User is able to add, delete personal notes; •User can check/uncheck any note; 
+•User can manage notes and personal profile only with valid JWT token in request; 
+•User can change his profile password; 
+•User can delete personal account; 
+•Ability to edit personal notes text;
