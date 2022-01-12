@@ -1,5 +1,3 @@
-# Orb 'codecov/codecov@3.1.1' resolved to 'codecov/codecov@3.1.1'
-# Orb 'circleci/node@4.7.0' resolved to 'circleci/node@4.7.0'
 version: 2
 jobs:
   node/test:
@@ -100,15 +98,3 @@ workflows:
     jobs:
     - node/test
   version: 2
-
-# Original config.yml file:
-# version: 2.1
-# orbs:
-#   codecov: codecov/codecov@3.1.1
-#   node: circleci/node@4.7.0
-# workflows:
-#   upload-to-codecov:
-#     jobs:
-#       - node/test:
-#           post-steps:
-#             - codecov/upload
